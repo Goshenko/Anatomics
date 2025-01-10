@@ -10,7 +10,7 @@
 
 ## Development
 
--Nelson Daniels
--George Bereza
+- Nelson Daniels
+- George Bereza
 
 .... everyone add yourself
