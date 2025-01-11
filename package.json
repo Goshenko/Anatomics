@@ -1,11 +1,12 @@
 {
+  "scripts": {
+    "start": "vite"
+  },
   "dependencies": {
     "three": "^0.172.0"
   },
   "devDependencies": {
+    "tailwindcss": "^3.4.17",
     "vite": "^6.0.7"
-  },
-  "scripts": {
-    "start": "vite"
   }
 }

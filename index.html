@@ -6,48 +6,190 @@
     <title>Anatomics</title>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <style>
-        /* Make the canvas fill the entire screen */
+
+        @font-face {
+            font-family: 'Nebula';
+            src: url('assets/fonts/Nebula-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            font-family: "Nebula";
+        }
+        
         body {
             margin: 0;
-            overflow: hidden;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #2d2d2d;
+            padding: 0.1rem;
+            text-align: center;
+            border-bottom: 1px solid #404040;
+            font-family: 'Nebula', Arial, sans-serif;
+            font-size: 24px;
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 60px);
+        }
+
+        .menu-section {
+            width: 200px;
+            padding: 1rem;
+            background-color: #2d2d2d;
+            border-right: 1px solid #404040;
+        }
+
+        .menu-button {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+            background-color: #3d3d3d;
+            border: 1px solid #505050;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-button:hover {
+            background-color: #4d4d4d;
+        }
+
+        .list-section {
+            width: 300px;
+            padding: 1rem;
+            background-color: #2d2d2d;
+            border-right: 1px solid #404040;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #505050;
+            border-radius: 4px;
+            background-color: #3d3d3d;
+            color: white;
+        }
+
+        .main-section {
+            flex-grow: 1;
+            padding: 2rem;
+            background-color: #2d2d2d;
+            text-align: center;
+        }
+
+        .checkbox-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: #505050;
+        }
+
+        .menu-title {
+            font-size: 0.7rem;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <!-- Main script file -->
-    <script type="module">
-        import * as THREE from 'https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js';
+    <header>
+        <h1>Anatomics</h1>
+    </header>
+    
+    <div class="container">
+        <div class="menu-section">
+            <div class="menu-title">
+                <h1>Main Menu</h1>
+            </div>
+            <button class="menu-button">Anatomy</button>
+            <button class="menu-button">Training Routine</button>
+            <button class="menu-button">Calendar</button>
+            <button class="menu-button">Food Search</button>
+        </div>
+        
+        <div class="list-section">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <div class="checkbox-list">
+                <label class="checkbox-item">
+                    <input type="checkbox"> Bench
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox"> Squat
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox"> Deadlift
+                </label>
+            </div>
+        </div>
+        
+        <div class="main-section">
+            <h1>Person Model</h1>
+            <div id="model-container" style="width: 100%; height: 500px;"></div>
 
-        // Scene, Camera, and Renderer
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-
-        // Geometry, Material, and Mesh
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
-
-        camera.position.z = 5;
-
-        // Animation Loop
-        function animate() {
-            requestAnimationFrame(animate);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        }
-        animate();
-
-        // Adjust the renderer size and camera aspect ratio when resizing the window
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    </script>
+            <script type="module">
+                import * as THREE from 'https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js';
+        
+                // Scene, Camera, and Renderer
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                const container = document.getElementById('model-container');
+                const renderer = new THREE.WebGLRenderer();
+                renderer.setSize(container.clientWidth, container.clientHeight);
+                container.appendChild(renderer.domElement);
+        
+                // Geometry, Material, and Mesh
+                const geometry = new THREE.BoxGeometry();
+                const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+                const cube = new THREE.Mesh(geometry, material);
+                scene.add(cube);
+        
+                camera.position.z = 5;
+        
+                // Animation Loop
+                function animate() {
+                    requestAnimationFrame(animate);
+                    cube.rotation.x += 0.01;
+                    cube.rotation.y += 0.01;
+                    renderer.render(scene, camera);
+                }
+                animate();
+        
+                // Update the camera aspect ratio to match container dimensions
+                camera.aspect = container.clientWidth / container.clientHeight;
+                camera.updateProjectionMatrix();
+        
+                // Update the resize listener to use container dimensions
+                window.addEventListener('resize', () => {
+                    camera.aspect = container.clientWidth / container.clientHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(container.clientWidth, container.clientHeight);
+                });
+            </script>
+        </div>
+    </div>
 </body>
 </html>
