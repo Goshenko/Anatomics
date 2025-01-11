@@ -10,8 +10,8 @@
 
 ## Development
 
+- George Bereza: Project Team Lead / Manager
 - Nelson Daniels
-- George Bereza
 - Nicolas Cunderlik
 
 .... everyone add yourself
