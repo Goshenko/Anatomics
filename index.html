@@ -1,105 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anatomics</title>
-    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: 'Nebula';
-            src: url('assets/Nebula-Regular.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'Exo2';
-            src: url('assets/Exo2-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #ffffff;
-            overflow-x: hidden; /* Prevents horizontal scrolling */
-        }
-
-        header {
-            background-color: #2d2d2d;
-            padding: 0.1rem;
-            text-align: center;
-            border-bottom: 1px solid #404040;
-            font-family: 'Nebula', Arial, sans-serif;
-            font-size: 24px;
-            font-weight:bold;
-        }
-
-        .container {
-            display: flex;
-            height: calc(100vh - 60px);
-            width: 100%; /* Fix the width */
-            box-sizing: border-box; /* Include padding/borders */
-        }
-
-        .menu-section {
-            width: 200px; /* Ensure consistent width */
-            padding: 1rem;
-            background-color: #2d2d2d;
-            border-right: 1px solid #404040;
-            box-sizing: border-box; /* Prevent padding issues */
-        }
-
-        .menu-title {
-            font-family: 'Nebula', Arial, sans-serif;
-            font-size: 1rem; /* Ensure readable size */
-            text-align: center;
-            margin-bottom: 1rem;
-            font-weight:bold;
-        }
-
-        .menu-button {
-            font-family: 'Exo2',Arial,sans-serif;
-            text-decoration: none;
-            text-align: center;
-            display: block;
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 0.8rem;
-            background-color: #3d3d3d;
-            border: 1px solid #505050;
-            border-radius: 8px;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            
-        }
-
-        .menu-button:hover {
-            background-color: #4d4d4d;
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anatomics</title>
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/output.css">
 </head>
 <body>
-    <header>
-        <h1>Anatomics</h1>
-    </header>
-    
-    <div class="container">
-        <div class="menu-section">
-            <div class="menu-title">
-                <h1>Main Menu</h1>
-            </div>
-            <a href="pages/anatomy.html" class="menu-button">Anatomy</a>
-            <a href="pages/trainingRoutine.html" class="menu-button">Training Routine</a>
-            <a href="pages/calendar.html" class="menu-button">Calendar</a>
-            <a href="pages/foodSearch.html" class="menu-button">Food Search</a>
-        </div>
+  <header>
+    <h1>Anatomics</h1>
+  </header>
+  <div class="container">
+    <div class="menu-section">
+      <div class="menu-title">
+        <h1>Main Menu</h1>
+      </div>
+      <a href="pages/anatomy.html" class="boton-elegante">Anatomy</a>
+      <a href="pages/trainingRoutine.html" class="boton-elegante">Training Routine</a>
+      <a href="pages/calendar.html" class="boton-elegante">Calendar</a>
+      <a href="pages/foodSearch.html" class="boton-elegante">Food Search</a>
     </div>
+  </div>
 </body>
 </html>
