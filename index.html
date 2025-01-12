@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anatomics</title>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'Nebula';
-            src: url('assets/Nebula-Regular.otf') format('opentype'); /* Got rid of /fonts */
+            src: url('assets/Nebula-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Exo2';
+            src: url('assets/Exo2-Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
 
-        h1 {
-            font-family: "Nebula";
-        }
-        
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #1a1a1a;
             color: #ffffff;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
 
         header {
@@ -32,21 +36,36 @@
             border-bottom: 1px solid #404040;
             font-family: 'Nebula', Arial, sans-serif;
             font-size: 24px;
+            font-weight:bold;
         }
 
         .container {
             display: flex;
             height: calc(100vh - 60px);
+            width: 100%; /* Fix the width */
+            box-sizing: border-box; /* Include padding/borders */
         }
 
         .menu-section {
-            width: 200px;
+            width: 200px; /* Ensure consistent width */
             padding: 1rem;
             background-color: #2d2d2d;
             border-right: 1px solid #404040;
+            box-sizing: border-box; /* Prevent padding issues */
+        }
+
+        .menu-title {
+            font-family: 'Nebula', Arial, sans-serif;
+            font-size: 1rem; /* Ensure readable size */
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight:bold;
         }
 
         .menu-button {
+            font-family: 'Exo2',Arial,sans-serif;
+            text-decoration: none;
+            text-align: center;
             display: block;
             width: 100%;
             padding: 0.8rem;
@@ -57,61 +76,13 @@
             color: white;
             cursor: pointer;
             transition: background-color 0.3s;
+            
         }
 
         .menu-button:hover {
             background-color: #4d4d4d;
         }
 
-        .list-section {
-            width: 300px;
-            padding: 1rem;
-            background-color: #2d2d2d;
-            border-right: 1px solid #404040;
-        }
-
-        .search-bar {
-            width: 100%;
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #505050;
-            border-radius: 4px;
-            background-color: #3d3d3d;
-            color: white;
-        }
-
-        .main-section {
-            flex-grow: 1;
-            padding: 2rem;
-            background-color: #2d2d2d;
-            text-align: center;
-        }
-
-        .checkbox-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: white;
-            cursor: pointer;
-        }
-
-        .checkbox-item input[type="checkbox"] {
-            width: 16px;
-            height: 16px;
-            cursor: pointer;
-            accent-color: #505050;
-        }
-
-        .menu-title {
-            font-size: 0.7rem;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
@@ -124,70 +95,10 @@
             <div class="menu-title">
                 <h1>Main Menu</h1>
             </div>
-            <button class="menu-button">Anatomy</button>
-            <button class="menu-button">Training Routine</button>
-            <button class="menu-button">Calendar</button>
-            <button class="menu-button">Food Search</button>
-        </div>
-        
-        <div class="list-section">
-            <input type="text" class="search-bar" placeholder="Search...">
-            <div class="checkbox-list">
-                <label class="checkbox-item">
-                    <input type="checkbox"> Bench
-                </label>
-                <label class="checkbox-item">
-                    <input type="checkbox"> Squat
-                </label>
-                <label class="checkbox-item">
-                    <input type="checkbox"> Deadlift
-                </label>
-            </div>
-        </div>
-        
-        <div class="main-section">
-            <h1>Person Model</h1>
-            <div id="model-container" style="width: 100%; height: 500px;"></div>
-
-            <script type="module">
-                import * as THREE from 'https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js';
-        
-                // Scene, Camera, and Renderer
-                const scene = new THREE.Scene();
-                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                const container = document.getElementById('model-container');
-                const renderer = new THREE.WebGLRenderer();
-                renderer.setSize(container.clientWidth, container.clientHeight);
-                container.appendChild(renderer.domElement);
-        
-                // Geometry, Material, and Mesh
-                const geometry = new THREE.BoxGeometry();
-                const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-                const cube = new THREE.Mesh(geometry, material);
-                scene.add(cube);
-        
-                camera.position.z = 5;
-        
-                // Animation Loop
-                function animate() {
-                    requestAnimationFrame(animate);
-                    cube.rotation.x += 0.01;
-                    cube.rotation.y += 0.01;
-                    renderer.render(scene, camera);
-                }
-                animate();
-        
-                // Update the camera aspect ratio to match container dimensions
-                camera.aspect = container.clientWidth / container.clientHeight;
-                camera.updateProjectionMatrix();
-        
-                // Update the resize listener to use container dimensions
-                window.addEventListener('resize', () => {
-                    camera.aspect = container.clientWidth / container.clientHeight;
-                    camera.updateProjectionMatrix();
-                    renderer.setSize(container.clientWidth, container.clientHeight);
-                });
-            </script>
+            <a href="pages/anatomy.html" class="menu-button">Anatomy</a>
+            <a href="pages/trainingRoutine.html" class="menu-button">Training Routine</a>
+            <a href="pages/calendar.html" class="menu-button">Calendar</a>
+            <a href="pages/foodSearch.html" class="menu-button">Food Search</a>
         </div>
     </div>
 </body>
