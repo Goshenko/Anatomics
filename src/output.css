@@ -121,4 +121,13 @@
     transform: translateY(-3px); /* Makes the text "float" upward */
     color: #000000; /* Optional: Change the text color on hover */
   }
+
+  /* Checkbox section */
+
+  .checklist-section {
+    background-color: #2d2d2d;
+    border-right: 1px solid #404040;
+  }
+
+
   
