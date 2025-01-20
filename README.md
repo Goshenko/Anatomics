@@ -10,7 +10,7 @@
 
 # Development
 
-###` Installation of Node Modules
+### Installation of Node Modules
 
 ```
 npm install
