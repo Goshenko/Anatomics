@@ -1,0 +1,19 @@
+{
+    "items": [
+      { "id": 1, "name": "Barbell Back Squat", "description": "Compound exercise targeting legs, glutes, and core. Place barbell across upper back, squat down until thighs are parallel to ground" },
+      { "id": 2, "name": "Bench Press", "description": "Classic chest exercise. Lie on bench, lower barbell to chest and press up with controlled movement" },
+      { "id": 3, "name": "Deadlift", "description": "Full body compound movement. Lift barbell from ground keeping back straight, driving through heels" },
+      { "id": 4, "name": "Pull-ups", "description": "Upper body exercise targeting back and biceps. Hang from bar and pull yourself up until chin passes bar" },
+      { "id": 5, "name": "Overhead Press", "description": "Shoulder strength exercise. Press barbell from shoulders to overhead position while standing" },
+      { "id": 6, "name": "Romanian Deadlift", "description": "Targets hamstrings and lower back. Hinge at hips with slight knee bend, lower weight while keeping back straight" },
+      { "id": 7, "name": "Dumbbell Row", "description": "Back exercise. Bend over supporting yourself on bench, row dumbbell to hip level" },
+      { "id": 8, "name": "Leg Press", "description": "Machine-based leg exercise. Push weight sled away from body using leg strength" },
+      { "id": 9, "name": "Tricep Dips", "description": "Isolation exercise for triceps. Lower body between parallel bars, then push back up" },
+      { "id": 10, "name": "Lat Pulldown", "description": "Back exercise using cable machine. Pull bar down to upper chest while seated" },
+      { "id": 11, "name": "Lunges", "description": "Unilateral leg exercise. Step forward and lower back knee toward ground, alternate legs" },
+      { "id": 12, "name": "Face Pulls", "description": "Rear deltoid and upper back exercise. Pull rope attachment to face level with high cable" },
+      { "id": 13, "name": "Calf Raises", "description": "Isolation exercise for calves. Rise up on toes while standing, can be done with or without weights" },
+      { "id": 14, "name": "Bicep Curls", "description": "Isolation exercise for biceps. Curl weight from full arm extension to shoulder while keeping elbows still" },
+      { "id": 15, "name": "Plank", "description": "Core exercise. Hold push-up position on forearms, keeping body straight and core engaged" }
+    ]
+  }
