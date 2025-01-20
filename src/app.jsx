@@ -20,7 +20,9 @@ function App() {
           <div className="text-center menu-title pt-4">
             <h1>Lifts-To-Do</h1>
           </div>
-          <SearchList />
+          <div className="h-5/6 w-full">
+            <SearchList />
+          </div>
         </div>
       </div>
     </>

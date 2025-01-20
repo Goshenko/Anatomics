@@ -26,7 +26,7 @@ const SearchList = () => {
   );
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-4 space-y-4">
+    <div className="w-full max-w-2xl mx-auto p-4 space-y-4 h-full flex flex-col">
       {/* Search Bar */}
       <div className="relative">
         <input
@@ -34,14 +34,14 @@ const SearchList = () => {
           placeholder="Lift Search"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="pl-10 w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="pl-10 w-full p-2 border text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
       </div>
 
       {/* Scrollable Results Box */}
-      <div className="w-full bg-white rounded-md">
-        <div className="h-96 overflow-y-auto">
+      <div className="w-full flex-auto bg-white rounded-md overflow-hidden">
+        <div className="h-full overflow-y-auto">
           <div className="p-4">
             {filteredItems.length === 0 ? (
               <p className="text-center text-gray-500">No items found</p>
