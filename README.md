@@ -1,12 +1,12 @@
-# Anatomics
+# Anatomics (WIP)
 
 ## Overview
 
-"write an overview"
+Anatomics is a interactive fitness web-application suited for those are wanting to customize and tailor their workout programs whilst having visual aids such as "Adam", our 3D anatomy.
 
-## Features
+## Features (WIP)
 
-"write about the features"
+
 
 # Development
 
@@ -19,14 +19,12 @@ npm install
 ### Running the Project
 
 ```
-npm run dev
+npm start
 ```
 
 ## Team
 
-- George Bereza: Project Team Lead / Manager
+- George Bereza: Project Manager
 - Nelson Daniels
 - Eric Heynings
 - Nicolas Cunderlik
-
-.... everyone add yourself
