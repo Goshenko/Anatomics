@@ -8,10 +8,9 @@ const MainMenu = () => {
                 <button className="bg-red-600 text-white px-4 py-2 rounded">Sign In</button>
             </header>
             <main className="flex flex-col items-center justify-center text-center text-white mt-20">
-                <h1 className="text-5xl font-bold mb-4">Welcome to Anatomics</h1>
+                <h1 className="text-6xl font-bold mb-4">Welcome to Anatomics</h1>
                 <p className="text-xl mb-8">Your ultimate fitness companion</p>
                 <button className="bg-red-600 text-white px-6 py-3 rounded text-lg">Get Started</button>
-                
             </main>
             <section className="mt-20 p-10 bg-black bg-opacity-50">
                 <h2 className="text-3xl font-bold text-white mb-6">Features</h2>
