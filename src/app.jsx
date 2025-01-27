@@ -7,11 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="container flex">
-        <div className="w-full">
-          <MainMenu />
-        </div>  
-      </div>
+      <MainMenu />
     </>
   );
 }
