@@ -1,12 +1,9 @@
 import React from 'react';
+import LandingHeader from './LandingHeader';
 
 const MainMenu = () => {
     return (
         <div className="min-h-screen bg-cover bg-center font-exo2" style={{ backgroundImage: "url('not set yet')" }}>
-            <header className="flex justify-between items-center p-5 bg-black bg-opacity-50">
-                <div className="text-white text-2xl font-bold">Anatomics</div>
-                <button className="bg-red-600 text-white px-4 py-2 rounded">Sign In</button>
-            </header>
             <main className="flex flex-col items-center justify-center text-center text-white mt-20">
                 <h1 className="text-6xl font-bold mb-4">Welcome to Anatomics</h1>
                 <p className="text-xl mb-8">Your ultimate fitness companion</p>
