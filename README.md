@@ -6,9 +6,11 @@ Anatomics is a interactive fitness web-application suited for those are wanting 
 
 ## Features (WIP)
 
+- 3D Virtual Model
+- Food Planning Tools
+- Workout Planning Tools
 
-
-# Development
+## Development
 
 ### Installation of Node Modules
 
@@ -25,6 +27,6 @@ npm start
 ## Team
 
 - George Bereza: Project Manager
-- Nelson Daniels
+- Nelson Daniels: Frontend Developer
 - Eric Heynings
 - Nicolas Cunderlik

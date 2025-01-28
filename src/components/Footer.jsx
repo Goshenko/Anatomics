@@ -1,36 +1,22 @@
 import React from "react";
+import GitHubIcon from '/assets/icons/github.png';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-2">
-      <div className="flex flex-col md:flex-row justify-between items-center text-xs">
+      <div className="flex flex-col md:flex-row justify-center items-center text-xs">
         <p>
           &copy; {new Date().getFullYear()} Anatomics. All rights reserved.
         </p>
         <div className="m-6 flex space-x-2">
+          <img src={GitHubIcon} alt="GitHub" className="h-6 w-6" />
           <a
-            href="https://www.facebook.com"
+            href="https://github.com/Goshenko/Anatomics"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="hover:underline flex items-center"
           >
-            Facebook
-          </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            Twitter
-          </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            LinkedIn
+          GitHub
           </a>
         </div>
       </div>

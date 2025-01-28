@@ -43,7 +43,7 @@ export const WorkoutCard = () => (
 
 export const FoodCard = () => (
     <Card
-     title="FoodPlan"
+     title="Food Plan"
      text="Maximize what you put out, with what you put in"
      icon={FoodIcon}
      variant="secondary"

@@ -10,7 +10,7 @@ function App() {
             <LandingHeader title="Anatomics" subtitle="Sign In"/>
             <main className="flex flex-col items-center justify-center text-center text-white mt-20 h-96">
                 <h1 className="text-6xl font-bold mb-4">Welcome to Anatomics</h1>
-                <p className="text-xl mb-8">Your ultimate fitness companion</p>
+                <p className="text-xl mb-8">Your Ultimate Fitness Companion</p>
                 <button className="bg-red-600 text-white px-6 py-3 rounded text-lg">Get Started</button>
             </main>
             <div className="mt-20 p-8 bg-black bg-opacity-50">
