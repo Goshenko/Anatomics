@@ -1,7 +1,7 @@
 import React from 'react';
-import BicepIcon from '/assets/icons/bicep.png';
-import CalenderIcon from '/assets/icons/calendar.png';
-import FoodIcon from '/assets/icons/dish.png';
+import BicepIcon from '/src/assets/icons/bicep.png';
+import CalenderIcon from '/src/assets/icons/calendar.png';
+import FoodIcon from '/src/assets/icons/dish.png';
 
 const Card = ({ title, text, icon: Icon, link, variant }) => {
     const variantStyles = {
