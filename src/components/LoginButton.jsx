@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const LoginButton = () => {
+const LoginButton = ({ text, width, height }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -11,9 +11,10 @@ const LoginButton = () => {
   return (
     <button 
       onClick={handleClick}
-      className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+      style={{ width: width, height: height }} // TODO: We can make significantly more reusable buttons if we define an important set of properties/functions for a button superclass/supercomponent
+      className="bg-red-600 text-white hover:bg-red-700 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
     >
-      Sign In
+      {text}
     </button>
   );
 };
