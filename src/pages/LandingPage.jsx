@@ -4,20 +4,16 @@ import { CalenderCard, FoodCard, WorkoutCard } from '../components/Card';
 import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
 import LoginButton from '../components/LoginButton';
+import backgroundImage from '../assets/icons/test-background.jpeg';
 
-function LandingPage() {
-  const navigate = useNavigate();
-
-  const handleGetStarted = () => {
-    navigate('/login');
-  };
+const LandingPage = () => {
 
   return (
-    <div className="min-h-screen bg-cover bg-center font-exo2" style={{ backgroundImage: "url('not set yet')" }}>
+    <div className="min-h-screen bg-cover bg-center bg-fixed font-exo2" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <LandingHeader title="Anatomics" subtitle="Sign In"/>
       <main className="flex flex-col items-center justify-center text-center text-white mt-20 h-96">
-        <h1 className="text-6xl font-bold mb-4">Welcome to Anatomics</h1>
-        <p className="text-xl mb-8">Your Ultimate Fitness Companion</p>
+        <h1 className="text-6xl font-bold mb-4 text-shadow-big-dark">Welcome to Anatomics</h1>
+        <p className="text-xl mb-8 text-shadow-dark">Your Ultimate Fitness Companion</p>
         <LoginButton
           text="Get Started"
           width="140px"
