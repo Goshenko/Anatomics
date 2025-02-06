@@ -142,3 +142,7 @@ header {
 .text-shadow-dark {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.815);
 }
+
+.login-button-shadow {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.747);
+}
