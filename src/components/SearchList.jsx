@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Search } from 'lucide-react';
-import jsonData from '../data/liftlist.json';
+import React, { useState } from "react";
+import { Search } from "lucide-react";
+import jsonData from "../data/liftlist.json";
 
 const SearchList = () => {
   const items = jsonData.items;
 
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedItems, setSelectedItems] = useState(new Set());
 
   const handleCheckboxChange = (itemId) => {
-    setSelectedItems(prevSelected => {
+    setSelectedItems((prevSelected) => {
       const newSelected = new Set(prevSelected);
       if (newSelected.has(itemId)) {
         newSelected.delete(itemId);
@@ -20,9 +20,10 @@ const SearchList = () => {
     });
   };
 
-  const filteredItems = items.filter(item =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.description.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredItems = items.filter(
+    (item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -47,9 +48,9 @@ const SearchList = () => {
               <p className="text-center text-gray-500">No items found</p>
             ) : (
               <ul className="divide-y divide-gray-200">
-                {filteredItems.map(item => (
-                  <li 
-                    key={item.id} 
+                {filteredItems.map((item) => (
+                  <li
+                    key={item.id}
                     className="py-4 px-3 hover:bg-gray-50 transition-colors duration-150 rounded-md -mx-3"
                   >
                     <div className="flex items-start space-x-3">
@@ -62,7 +63,9 @@ const SearchList = () => {
                         />
                       </div>
                       <div>
-                        <h3 className="font-medium font-exo2 text-black">{item.name}</h3>
+                        <h3 className="font-medium font-exo2 text-black">
+                          {item.name}
+                        </h3>
                       </div>
                     </div>
                   </li>
@@ -72,7 +75,7 @@ const SearchList = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Optional: Display selected items count */}
       <div className="text-sm text-center text-gray-600">
         Selected items: {selectedItems.size}
