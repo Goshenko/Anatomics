@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const Header = () => {
   return (
     <header>
-        <h1>Anatomics</h1>
+      <h1>Anatomics</h1>
     </header>
   );
 };
